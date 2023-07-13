@@ -8,7 +8,19 @@
   status: pass
 
 - summary: |
+    Навигация по страницам каталога.
+  status: fail
+
+- summary: |
+    Хэштег с переходом в категорию
+  status: fail
+
+- summary: |
     Использование фильтра товаров
+  status: pass
+
+- summary: |
+    Использование фильтра товаров (негативный тест)
   status: pass
 
 - summary: |
@@ -26,7 +38,15 @@
 - summary: |
     Просмотр корзины
   status: pass
-  
+
+- summary: |
+    Отчистка корзины и продолжение покупок из корзины
+  status: pass
+
+- summary: |
+    Покупка товара
+  status: pass
+
 - summary: |
     Удобность использования и оптимизация работы сайта Cookies
   status: fail
@@ -45,6 +65,10 @@
 
 - summary: |
     Корректное отображение контента и элементов на различных устройствах и браузерах.
+  status: fail
+
+- summary: |
+    Корректное отоброжение контента, проверка ошибок в DevTools
   status: fail
 
 - summary: |
