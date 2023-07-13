@@ -1,11 +1,39 @@
 ---
 - summary: |
+    ХНавигация по страницам каталога.
+  environment: |
+    Safari Версия 16.5.1 (18615.2.9.11.7)
+    ОС macOS Ventura 13.4.1 (22F82)
+  steps-to-reproduce: |
+    1. На главной странице нажать на кнопку "Next"
+    2. Перейти на следующую страницу каталога
+    3. Нажать на кнопку "Previous"
+    4. Вернуться на первую страницу
+  expected-result: |
+    Пользователь должен переходить по страницам каталога
+  actual-result: |
+    На крайних страницах католога присутствуют кнопки "Previous", "Next" и причем они не работают в своих крайних позициях
+
+- summary: |
+    Хэштег с переходом в категорию
+  environment: |
+    Safari Версия 16.5.1 (18615.2.9.11.7)
+    ОС macOS Ventura 13.4.1 (22F82)
+  steps-to-reproduce: |
+    1. Выбрать любой товар
+    2. На странице товара нажать нажать на Хэштег 
+  expected-result: |
+    Пользователя должно перекинуть на страницу со всеми товарами из это категории товара
+  actual-result: |
+    Ничего не происходит.
+
+- summary: |
     Локализация сайта
   environment: |
     Safari Версия 16.5.1 (18615.2.9.11.7)
     ОС macOS Ventura 13.4.1 (22F82)
   steps-to-reproduce: |
-    1. Зайти на страницу 
+    1. Зайти на страницу (https://hexlet-products-store.vercel.app)
     2. Нажать ссылку изменить язык на Русский
     3. Зайти в карточку товара (нажать на любой товар)
   expected-result: |
@@ -19,7 +47,7 @@
     Safari Версия 16.5.1 (18615.2.9.11.7)
     ОС macOS Ventura 13.4.1 (22F82)
   steps-to-reproduce: |
-    1. Зайти на страницу 
+    1. Зайти на страницу (https://hexlet-products-store.vercel.app)
     2. Добавить любой товар в корзину 
     3. Изменить язык.
     3. Закрыть сайт (вкладку)
@@ -35,7 +63,7 @@
     Safari Версия 16.5.1 (18615.2.9.11.7)
     ОС macOS Ventura 13.4.1 (22F82)
   steps-to-reproduce: |
-    1. Зайти на страницу 
+    1. Зайти на страницу (https://hexlet-products-store.vercel.app)
     2. Пролистать до конца
     3. Обратить внимание на кнопки добавление товара.
   expected-result: |
@@ -46,12 +74,29 @@
 - summary: |
     Корректное отображение контента и элементов на различных устройствах и браузера
   environment: |
-    Safari Версия 16.5.1 (18615.2.9.11.7)
+    Google Chrome Версия 114.0.5735.198
     ОС macOS Ventura 13.4.1 (22F82)
   steps-to-reproduce: |
-    1. Зайти на страницу 
+    1. Зайти на страницу (https://hexlet-products-store.vercel.app)
     2. Нажать на смену языка
   expected-result: |
     Выбор из двух языков с логотипом этих языков
   actual-result: |
     Отображаеться только логотип Русского языка у Англйского нет 
+
+- summary: |
+    Корректное отоброжение контента, проверка ошибок в DevTools
+  environment: |
+    Google Chrome Версия 114.0.5735.198
+    ОС macOS Ventura 13.4.1 (22F82)
+  steps-to-reproduce: |
+    1. Зайти на страницу (https://hexlet-products-store.vercel.app)
+    2. Перейти в режим разработчика DevTools
+    3. В DevTools проверить что все запросы уходят и приходят ответы без ошибок
+  expected-result: |
+    Ошибок быть не должно 
+  actual-result: |
+    Ошибки:
+    1. GET https://site/static/css/random.css net::ERR_NAME_NOT_RESOLVED
+    2. GET https://site/static/js/author.js net::ERR_NAME_NOT_RESOLVED  
+
