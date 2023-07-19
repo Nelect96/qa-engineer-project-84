@@ -52,6 +52,7 @@
   prerequisites: |
    Открыть главную страницу сайта (https://hexlet-products-store.vercel.app)
   test-data: |
+    -
   steps:
     - Выбрать любой товар
     - На странице товара нажать нажать на Хэштег 
