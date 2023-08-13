@@ -1,6 +1,6 @@
 ---
 - summary: |
-    ХНавигация по страницам каталога.
+    Навигация по страницам каталога.
   environment: |
     Safari Версия 16.5.1 (18615.2.9.11.7)
     ОС macOS Ventura 13.4.1 (22F82)
@@ -96,7 +96,7 @@
   expected-result: |
     Ошибок быть не должно 
   actual-result: |
-    Ошибки:
+    Ошибки
     1. GET https://site/static/css/random.css net::ERR_NAME_NOT_RESOLVED
     2. GET https://site/static/js/author.js net::ERR_NAME_NOT_RESOLVED  
 
